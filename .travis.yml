@@ -61,8 +61,6 @@ before_install:
   - xcpretty -v
   # show go version
   - go version
-  # show stack version
-  - stack --version
 
 script:
   # run integration tests defined in maven pom.xml
