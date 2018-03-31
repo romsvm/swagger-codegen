@@ -80,10 +80,10 @@ public class KotlinClientCodegenModelTest {
 
         final CodegenProperty property3 = cm.vars.get(2);
         Assert.assertEquals(property3.baseName, "createdAt");
-        Assert.assertEquals(property3.datatype, "java.time.LocalDateTime");
+        Assert.assertEquals(property3.datatype, "kotlin.String");
         Assert.assertEquals(property3.name, "createdAt");
         Assert.assertEquals(property3.defaultValue, "null");
-        Assert.assertEquals(property3.baseType, "java.time.LocalDateTime");
+        Assert.assertEquals(property3.baseType, "kotlin.String");
         Assert.assertFalse(property3.hasMore);
         Assert.assertFalse(property3.required);
         Assert.assertTrue(property3.isNotContainer);

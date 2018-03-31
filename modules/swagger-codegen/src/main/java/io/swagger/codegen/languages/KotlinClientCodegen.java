@@ -23,7 +23,7 @@ public class KotlinClientCodegen extends DefaultCodegen implements CodegenConfig
     protected String packageName = "io.swagger.client";
     protected String apiDocPath = "docs/";
     protected String modelDocPath = "docs/";
-    protected CodegenConstants.ENUM_PROPERTY_NAMING_TYPE enumPropertyNaming = CodegenConstants.ENUM_PROPERTY_NAMING_TYPE.camelCase;
+    protected CodegenConstants.ENUM_PROPERTY_NAMING_TYPE enumPropertyNaming = CodegenConstants.ENUM_PROPERTY_NAMING_TYPE.PascalCase;
 
     /**
      * Constructs an instance of `KotlinClientCodegen`.
@@ -147,16 +147,16 @@ public class KotlinClientCodegen extends DefaultCodegen implements CodegenConfig
         typeMapping.put("long", "kotlin.Long");
         typeMapping.put("double", "kotlin.Double");
         typeMapping.put("number", "java.math.BigDecimal");
-        typeMapping.put("date-time", "java.time.LocalDateTime");
-        typeMapping.put("date", "java.time.LocalDateTime");
+        typeMapping.put("date-time", "kotlin.String");
+        typeMapping.put("date", "kotlin.String");
         typeMapping.put("file", "java.io.File");
         typeMapping.put("array", "kotlin.Array");
         typeMapping.put("list", "kotlin.Array");
         typeMapping.put("map", "kotlin.collections.Map");
         typeMapping.put("object", "kotlin.Any");
         typeMapping.put("binary", "kotlin.Array<kotlin.Byte>");
-        typeMapping.put("Date", "java.time.LocalDateTime");
-        typeMapping.put("DateTime", "java.time.LocalDateTime");
+        typeMapping.put("Date", "kotlin.String");
+        typeMapping.put("DateTime", "kotlin.String");
 
         instantiationTypes.put("array", "arrayOf");
         instantiationTypes.put("list", "arrayOf");
